@@ -22,10 +22,10 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    maxOpenPreparedStatements: 20 
+    maxOpenPreparedStatements: 20
 eureka:
   client:
-    serviceUrl: 
+    serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
   instance:
     prefer-ip-address: true
@@ -43,3 +43,6 @@ feign:
 mybatis:
   mapper-locations:
   - mapper/*.xml
+#接口文档swagger
+swagger: ##给swagger设置一个开关
+  ebable: true

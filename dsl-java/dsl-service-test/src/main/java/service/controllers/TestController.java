@@ -6,11 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.base.BaseController;
+import service.base.GlobalResult;
 import service.feign.UserFeign;
 import service.model.User;
-
-import java.util.List;
 
 /**
  * @ClassName TestController
@@ -26,13 +24,11 @@ import java.util.List;
 public class TestController extends BaseController {
     @Autowired
     private UserFeign userFeign;
+
     @GetMapping("/getall")
-    @ApiOperation(value="获取全部用户", notes="test: 仅1和2有正确返回")
-    public List<User> getAll(){
+    @ApiOperation(value = "获取全部用户", notes = "test: 仅1和2有正确返回")
+    public GlobalResult<User> getAll() {
         return userFeign.getall();
     }
-    @Override
-    public void getErrorLog(String errorMsg) {
 
-    }
 }

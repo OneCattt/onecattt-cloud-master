@@ -15,6 +15,18 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.2.RELEASE</version>
     </parent>
+    <profiles>
+        <profile>
+            <id>pro</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env_conf>conf_deploy</env_conf>
+                <ver_type>.RELEASE</ver_type>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
 

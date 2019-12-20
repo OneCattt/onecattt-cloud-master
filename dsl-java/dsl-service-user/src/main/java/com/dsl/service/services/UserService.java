@@ -1,5 +1,6 @@
 package com.dsl.service.services;
 
+import com.dsl.service.base.GlobalResult;
 import com.dsl.service.model.User;
 
 import java.util.List;
@@ -19,5 +20,5 @@ public interface UserService {
      * @Param
      * @return
      **/
-    List<User> getAllUser();
+    GlobalResult<User> getAllUser();
 }

@@ -1,5 +1,6 @@
 package com.dsl.service.services.Impl;
 
+import com.dsl.service.base.GlobalResult;
 import com.dsl.service.mappers.UserMapper;
 import com.dsl.service.model.User;
 import com.dsl.service.services.UserService;
@@ -22,7 +23,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public List<User> getAllUser() {
-        return userMapper.getAll();
+    public GlobalResult<User> getAllUser() {
+        return GlobalResult.success(userMapper.getAll());
     }
 }
